@@ -2,7 +2,13 @@ import { useState } from 'react'
 
 const GifExpertApp = () => {
     const [categories, setCategories] = useState(['one punch', 'dragon Ball'])
-    console.log(categories);
+    // console.log(categories);
+
+    const onAddCategory = () => {
+      console.log('Valorant')
+      setCategories([...categories, 'valorant'])
+    }
+
   return (
     <>
     {/* Titulo */}
@@ -10,9 +16,12 @@ const GifExpertApp = () => {
     {/* Input */}
     {/* Listado de Gif */}
         {/* Gif Item */}
-        {categories.map(category => {
-            return <li key={category}>{category}</li>
-        })}
+        <button onClick={onAddCategory}>Agregar</button>
+        <ol>
+          {categories.map(category => {
+              return <li key={category}>{category}</li>
+          })}
+        </ol>
         
     </>
   )
