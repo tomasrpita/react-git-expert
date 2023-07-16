@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import AddCategory from './components/AddCategory'
-import GifGrid from './components/GifGrid'
+import { GifGrid } from './components/GifGrid'
 
 const GifExpertApp = () => {
-    const [categories, setCategories] = useState(['one punch', 'dragon Ball'])
+    const [categories, setCategories] = useState(['one punch'])
     // console.log(categories);
 
     const onAddCategory = (newCategory) => {

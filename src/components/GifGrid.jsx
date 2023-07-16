@@ -1,7 +1,8 @@
+import { getGifts } from "../helpers/getGifts";
 
-function GifGrid({category}) {
-  
-  
+export const GifGrid = ({category})  =>  {
+    getGifts(category)
+
     return (
     <>
         <h3>{category}</h3>
@@ -10,4 +11,3 @@ function GifGrid({category}) {
   )
 }
 
-export default GifGrid
