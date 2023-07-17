@@ -4,16 +4,13 @@ export const getGifts = async (category) => {
     const resp = await fetch(url)
     const {data}  = await resp.json()
   
-    // console.log(resp)
-    // console.log(data)
-  
     const gifts = data.map(img => ({
       id: img.id,
       title: img.title,
       url: img.images.downsized_medium
     }))
   
-    console.log(gifts)
+    return gifts
   
   }
   
